@@ -46,23 +46,16 @@ pipeline {
             steps {
                 sh 'mvn package -DskipTests'
             }
-        }
-
-           stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+       
+          stage('Stage-8 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'mvn deploy -DskipTests'
-            }
-        }
-
-          stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
-            steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://20.16.22.39:8080/manager/text/deploy?path=/devops&update=true"'
+                sh 'curl -u admin:redhat@123 -T target/**.war "http://20.16.22.39:8080/manager/text/deploy?path=/chethan&update=true"'
             }
         } 
   
-          stage('Stage-10 : SmokeTest') { 
+          stage('Stage-9 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://20.16.22.39:8080/devops"'
+                sh 'curl --retry-delay 10 --retry 5 "http://20.16.22.39:8080/chethan"'
             }
         }
 
