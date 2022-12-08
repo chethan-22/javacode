@@ -18,7 +18,7 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore compile"
   }
   stage ('Test') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test-t"
   }
   stage ('Package') {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package"
