@@ -4,12 +4,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <servers>
     <server>
       <username>${security.getCurrentUsername()}</username>
-      <password>${security.getEscapedEncryptedPassword()!"Chethan@22"}</password>
+      <password>${security.getEscapedEncryptedPassword()"Chethan@22"}</password>
       <id>central</id>
     </server>
     <server>
       <username>${security.getCurrentUsername()}</username>
-      <password>${security.getEscapedEncryptedPassword()!"Chethan@22"}</password>
+      <password>${security.getEscapedEncryptedPassword()"Chethan@22"}</password>
       <id>snapshots</id>
     </server>
   </servers>
