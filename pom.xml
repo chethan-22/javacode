@@ -40,11 +40,6 @@
         <name>libs-snapshot-local</name>
         <url>https://chethangolla.jfrog.io/artifactory/libs-snapshot-local/</url>
     </snapshotRepository>
-    <repository>
-        <id>libs-release-local</id>
-        <name>libs-release-local</name>
-        <url>https://chethangolla.jfrog.io/artifactory/libs-release-local/</url>
-    </repository>
 </distributionManagement>
 
 	
