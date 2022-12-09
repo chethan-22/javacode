@@ -37,8 +37,8 @@
 <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>example-repo-local</name>
-        <url>https://cloudbinary.jfrog.io/artifactory/example-repo-local/</url>
+        <name>a0wmwp2bndfte-artifactory-primary-0-snapshots</name>
+        <url>https://chethangolla.jfrog.io/artifactory/libs-snapshot</url>
     </snapshotRepository>
     <repository>
         <id>central</id>
