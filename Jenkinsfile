@@ -34,7 +34,7 @@ pipeline {
         }
           stage('Stage-5 : Install') { 
             steps {
-                sh 'mvn install -DskipTests'
+                sh 'mvn install -s settings.xml -DskipTests'
             }
         }
           stage('Stage-6 : Verify') { 
