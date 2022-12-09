@@ -1,0 +1,2 @@
+install: ${user.home}/.m2/settings.xml
+install: ${maven.home}/conf/settings.xml
