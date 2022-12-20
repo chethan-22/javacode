@@ -4,7 +4,7 @@ pipeline {
          maven 'maven'
          jdk 'java'
     }
-    // stages {
+    stages {
 
     //     stage('Stage-0 : Static Code Analysis Using SonarQube') { 
     //         steps {
