@@ -7,20 +7,23 @@
   <version>3.0-SNAPSHOT</version>
   <name>01-maven-web-app</name>
   <url>http://maven.apache.org</url>
-  
-<!--   <properties>
+        <properties>
 		<!-- SonarQube Integration -->
 		<sonar.organization>jenkins-tomcat-intigration-sonar</sonar.organization>
 		<sonar.projectKey>test-integration</sonar.projectKey>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.login>ac20e50662ef73e2493ffc841aee539581705b3d</sonar.login>
-	</properties> 
--->
-  <distributionManagement>
+	</properties>
+  <distributionManagement> 
+    <SnapshotRepository>
+        <id>default-libs-snapshot-local</id>
+        <name>default-libs-snapshot-local</name>
+        <url>https://chethangolla.jfrog.io/artifactory/default-libs-snapshot-local/</url>
+    </SnapshotRepository> 
     <repository>
-        <id>central</id>
-        <name>a0wmwp2bndfte-artifactory-primary-0-releases</name>
-        <url>https://chethangolla.jfrog.io/artifactory/default-libs-release</url>
+        <id>default-libs-release-local</id>
+        <name>default-libs-release-local</name>
+        <url>https://chethangolla.jfrog.io/artifactory/default-libs-release-local/</url>
     </repository>
 </distributionManagement>
  
