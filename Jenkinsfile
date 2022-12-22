@@ -6,11 +6,11 @@ pipeline {
     }
     stages {
 
-         stage('Stage-0 : Static Code Analysis Using SonarQube') { 
-             steps {
-                 sh 'mvn clean verify sonar:sonar -DskipTests'
-             }
-         }
+//          stage('Stage-0 : Static Code Analysis Using SonarQube') { 
+//              steps {
+//                  sh 'mvn clean verify sonar:sonar -DskipTests'
+//              }
+//          }
 
         stage('Stage-1 : Clean') { 
             steps {
@@ -47,11 +47,11 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
-        //   stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
-        //     steps {
-        //         sh 'mvn deploy -DskipTests'
-        //     }
-        // }
+          stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+            steps {
+                sh 'mvn deploy -DskipTests'
+            }
+        }
           stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
                 sh 'curl -u chethan:Chethan@2222 -T target/**.war "http://20.198.106.23:8080/manager/text/deploy?path=/gopi&update=true"'
