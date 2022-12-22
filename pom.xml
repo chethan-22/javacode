@@ -19,12 +19,7 @@
         <id>default-libs-snapshot-local</id>
         <name>default-libs-snapshot-local</name>
         <url>https://chethangolla.jfrog.io/artifactory/default-libs-snapshot-local/</url>
-    </SnapshotRepository> 
-    <repository>
-        <id>default-libs-release-local</id>
-        <name>default-libs-release-local</name>
-        <url>https://chethangolla.jfrog.io/artifactory/default-libs-release-local/</url>
-    </repository>
+    </SnapshotRepository>
 </distributionManagement>
  
   <dependencies>
