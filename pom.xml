@@ -15,11 +15,11 @@
 		<sonar.login>ac20e50662ef73e2493ffc841aee539581705b3d</sonar.login>
 	</properties>
   <distributionManagement> 
-    <SnapshotRepository>
+    <snapshotRepository>
         <id>default-libs-snapshot-local</id>
         <name>default-libs-snapshot-local</name>
         <url>https://chethangolla.jfrog.io/artifactory/default-libs-snapshot-local/</url>
-    </SnapshotRepository>
+    </snapshotRepository>
 </distributionManagement>
  
   <dependencies>
