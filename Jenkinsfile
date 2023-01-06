@@ -46,7 +46,6 @@ pipeline {
                 sh 'curl -u chethan:chethan@22 -T target/**.war "http://20.232.165.38:8090/manager/text/deploy?path=/maheshbabu&update=true"'
             }
         } 
-  
           stage('Stage-9 : SmokeTest') { 
             steps {
                 sh 'curl --retry-delay 10 --retry 5 "http://20.232.165.38:8090/maheshbabu"'
