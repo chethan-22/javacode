@@ -6,12 +6,6 @@ pipeline {
     }
     stages {
 
-         stage('Stage-0 : Static Code Analysis Using SonarQube') { 
-             steps {
-                 sh 'mvn clean verify sonar:sonar -DskipTests'
-             }
-         }
-
         stage('Stage-1 : Clean') { 
             steps {
                 sh 'mvn clean'
@@ -29,41 +23,34 @@ pipeline {
         }
          stage('Stage-4 : Test') { 
             steps {
-                sh 'mvn test -DskipTests'
+                sh 'mvn test'
             }
         }
           stage('Stage-5 : Install') { 
             steps {
-                sh 'mvn install -DskipTests'
+                sh 'mvn install'
             }
         }
           stage('Stage-6 : Verify') { 
             steps {
-                sh 'mvn verify -DskipTests'
+                sh 'mvn verify'
             }
         }
           stage('Stage-7 : Package') { 
             steps {
-                sh 'mvn package -DskipTests'
+                sh 'mvn package'
             }
         }
-          stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+          stage('Stage-8 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'mvn deploy -DskipTests'
-            }
-        }
-          stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
-            steps {
-                sh 'curl -u chethan:Chethan@2222 -T target/**.war "http://20.198.106.23:8080/manager/text/deploy?path=/maheshbabu&update=true"'
+                sh 'curl -u chethan:chethan@22 -T target/**.war "http://20.232.165.38:8090/manager/text/deploy?path=/maheshbabu&update=true"'
             }
         } 
   
-          stage('Stage-10 : SmokeTest') { 
+          stage('Stage-9 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://20.198.106.23:8080/maheshbabu"'
+                sh 'curl --retry-delay 10 --retry 5 "http://20.232.165.38:8090/maheshbabu"'
             }
         }
-
-  
     }
 }
