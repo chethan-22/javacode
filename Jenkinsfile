@@ -1,8 +1,8 @@
 pipeline {
     agent any 
     tools {
-         maven 'apache-maven-3.6.3'
-         java 'jdk-11.0.17'
+         maven 'maven'
+         java 'java'
     }
     stages {
 
@@ -43,12 +43,12 @@ pipeline {
         }
           stage('Stage-8 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u chethan:chethan@22 -T target/**.war "http://20.232.165.38:8090/manager/text/deploy?path=/maheshbabu&update=true"'
+                sh 'curl -u chethan:Chethan@22 -T target/**.war "http://172.173.179.196:8080/manager/text/deploy?path=/maheshbabu&update=true"'
             }
         } 
           stage('Stage-9 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://20.232.165.38:8090/maheshbabu"'
+                sh 'curl --retry-delay 10 --retry 5 "http://172.173.179.196:8080/maheshbabu"'
             }
         }
     }
