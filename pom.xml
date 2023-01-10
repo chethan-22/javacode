@@ -9,10 +9,10 @@
   <url>http://maven.apache.org</url>
         <properties>
 		<!-- SonarQube Integration -->
-		<sonar.organization>jenkins-tomcat-intigration-sonar</sonar.organization>
-		<sonar.projectKey>test-integration</sonar.projectKey>
+		<sonar.organization>new-project123</sonar.organization>
+		<sonar.projectKey>tomcat-1</sonar.projectKey>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.login>ac20e50662ef73e2493ffc841aee539581705b3d</sonar.login>
+		<sonar.login>8865234bb2b2e4598104cf68751392ca7f537be0</sonar.login>
 	</properties>
   <distributionManagement> 
     <snapshotRepository>
